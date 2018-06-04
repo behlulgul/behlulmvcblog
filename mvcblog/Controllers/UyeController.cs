@@ -137,5 +137,11 @@ namespace mvcblog.Controllers
             
                 return View();
         }
+
+        public ActionResult UyeProfil(int id)
+        {
+            var uye = db.Uyes.Where(u => u.UyeId == id).SingleOrDefault();
+            return View(uye);
+        }
     }
 }
